@@ -7,32 +7,32 @@ IMEX is simple image extractor that extract images from pdf it created as a expe
 - Clone this repo
 
 ```bash
-  git clone https://github.com/dharshan-0/imex.git
+git clone https://github.com/dharshan-0/imex.git
 ```
 
 - Go to the imex directory
 
 ```bash
-  cd imex
+cd imex
 ```
 
 - Install dependencies
 
 ```bash
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 - Then setup db with this command
 
 ```bash
-  python manage.py makemigration
-  python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 - Run the developement server and have fun
 
 ```bash
-  python manage.py runserver
+python manage.py runserver
 ```
 
 ## Note
