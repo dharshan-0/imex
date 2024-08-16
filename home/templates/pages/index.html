@@ -1,0 +1,29 @@
+{% extends "../html-base.html" %}
+
+
+{% block title %}IMage EXtractor{% endblock title %}
+
+{% block header %}
+    {% include "../nav/nav-index.html" %}
+{% endblock header %}
+
+{% block main %}
+   <h1>IMAGE extractor from PDF</h1>
+    <p class="lead">File should be in pdf format and file should be in 40MB or less</p>
+  <div>
+    <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+      <label for="formFileLg" class="form-label">Upload file here</label>
+      {% for field in form %}
+        {{field}}
+        <section>
+          {% for error in field.errors %}
+            <p class="m-1 text-warning-emphasis">{{error|striptags}}</p>
+          {% endfor %}
+        </section>
+      {% endfor %}
+      <p class="lead mt-3">
+        <button type="submit" class="btn btn-lg btn-light fw-bold border-white bg-white">Extract</button>
+      </p>
+    </form>
+  </div>
+{% endblock main %}

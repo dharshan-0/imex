@@ -1,0 +1,18 @@
+{% extends "../html-base.html" %}
+
+
+{% block title %}IMEX{% endblock title %}
+
+{% block header %}
+    {% include "../nav/nav-download.html" %}
+{% endblock header %}
+
+{% block main %}
+<p class="h2 mb-4">Thankyou for using our service</p>
+<p class="lead">Download your file here</p>
+<form method="post" enctype="multipart/form-data"> {% csrf_token %}
+    <p class="lead mt-3">
+        <button type="submit" class="btn btn-lg btn-light fw-bold border-white bg-white">Download</button>
+    </p>
+</form>
+{% endblock main %}

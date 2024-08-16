@@ -1,0 +1,5 @@
+{% extends "../nav-base.html" %}
+
+{% block attr1 %}class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">{% endblock %}
+{% block attr2 %}class="nav-link fw-bold py-1 px-0" href="{% url "homeapp:download_page" %}">{% endblock %}
+{% block attr3 %}class="nav-link fw-bold py-1 px-0" href="{% url "homeapp:disclaimer_contact_page" %}">{% endblock %}
